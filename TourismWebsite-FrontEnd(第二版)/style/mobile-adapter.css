@@ -1,0 +1,108 @@
+.main-nav {
+  position: relative;
+}
+.main-nav .logo {
+  display: flex;
+}
+.main-nav .logo img {
+  height: 20px;
+  margin: auto 0;
+}
+.main-nav .logo span {
+  line-height: 50px;
+  white-space: nowrap;
+  font-size: 24px;
+  color: #04b4db;
+}
+.main-nav .nav {
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  display: none;
+}
+.main-nav .nav li {
+  border-bottom: 1px solid #04b4db;
+  width: 95%;
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 30%;
+}
+.main-nav .menu-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  border: 1px solid #04b4db;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.main-nav #menu-checkbox {
+  display: none;
+}
+.main-nav #menu-checkbox:checked + .nav {
+  display: block;
+}
+#wlittleyang-banner-fade .container {
+  height: 200px;
+}
+.hot .hot-content header,
+.hot .hot-content p {
+  width: 100%;
+}
+#wlittleyang-banner-five {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
+#wlittleyang-banner-five .action {
+  display: none;
+}
+.traffic .moreLink {
+  display: none;
+}
+.news .news-item {
+  width: 98%;
+  flex-direction: column;
+}
+.news .news-item .news-con-title {
+  top: 25px;
+}
+.news .news-item .item-left {
+  box-shadow: 0 0 5px #cccccc;
+  padding: 20px 15px 20px 15px;
+}
+.news .news-item .item-right {
+  display: flex;
+  height: 20px;
+  line-height: 20px;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.news .news-item .item-right > div {
+  padding: 0 15px;
+}
+.news .news-item .item-right .moreLink {
+  display: none;
+}
+body > footer .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body > footer .contact .contact-msg .contact-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body > footer .contact .contact-msg .contact-item .contact-msg-img {
+  margin: 15px auto;
+}
+body > footer .contact .contact-kinds .ewm div {
+  margin: 0 5px;
+}
+body > footer .contact .contact-kinds .phone-number {
+  justify-content: space-between;
+}
+/*# sourceMappingURL=mobile-adapter.css.map */

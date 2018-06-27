@@ -1,0 +1,98 @@
+.defaultBorder {
+  border: 1px solid seagreen;
+}
+.main-nav {
+  margin-bottom: 15px;
+  display: flex;
+}
+.main-nav .liner {
+  background-color: #04b4db;
+  width: 25%;
+  height: 4px;
+  margin-top: 21px;
+  border: none;
+}
+.main-nav .header-right .nav-container {
+  display: flex;
+}
+.main-nav .header-right .nav-container .logo {
+  display: flex;
+}
+.main-nav .header-right .nav-container .logo img {
+  height: 50px;
+}
+.main-nav .header-right .nav-container .logo span {
+  line-height: 50px;
+  white-space: nowrap;
+}
+.main-nav .header-right .nav-container .nav {
+  display: flex;
+}
+.main-nav .header-right .nav-container .nav li {
+  width: 56px;
+  line-height: 50px;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 15px;
+  position: relative;
+}
+.main-nav .header-right .nav-container .nav li::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #04b4dc;
+  left: -10px;
+  bottom: -4px;
+  display: none;
+}
+.main-nav .header-right .nav-container .nav li:first-child::before {
+  display: block;
+}
+.main-nav .header-right .nav-container .nav li:first-child {
+  color: #04b4dc;
+  box-shadow: 0 3px 0 #04b4db;
+}
+.main-nav .header-right .nav-container .nav li:hover {
+  color: #04b4dc;
+  box-shadow: 0 3px 0 #04b4db;
+}
+.main-nav .header-right .nav-container .nav li:hover:before {
+  display: block;
+}
+.main-nav .header-right .nav-container #menu-checkbox,
+.main-nav .header-right .nav-container .menu-btn {
+  display: none;
+}
+.team #wlittleyang-banner-five {
+  width: 540px;
+  height: 300px;
+  margin: 10px auto;
+  /*控制器*/
+}
+.team #wlittleyang-banner-five .action {
+  width: 600px;
+}
+.news .news-item {
+  width: 75%;
+  box-shadow: 0 0 5px #cccccc;
+  padding: 20px 15px 20px 15px;
+}
+.news .news-item .news-con-title {
+  top: 5px;
+}
+.news .news-item .item-left,
+.news .news-item .item-right {
+  height: 100px;
+}
+body > footer .contact .contact-msg-img {
+  flex-direction: column;
+}
+body > footer .contact .ewm {
+  margin: 0 50px;
+}
+body > footer .contact .phone-number {
+  justify-content: space-around;
+}
+/*# sourceMappingURL=desktop-adapter.css.map */

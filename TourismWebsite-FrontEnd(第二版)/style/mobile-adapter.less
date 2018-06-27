@@ -1,0 +1,123 @@
+
+.main-nav {
+  position: relative;
+  .logo {
+    display: flex;
+    img {
+      height: 20px;
+      margin: auto 0;
+    }
+    span {
+      line-height: 50px;
+      white-space: nowrap;
+      font-size: 24px;
+      color: #04b4db;
+    }
+  }
+  .nav {
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    display: none;
+    li{
+      border-bottom: 1px solid #04b4db;
+      width: 95%;
+      margin: 5px auto;
+      padding: 5px;
+      border-radius: 30%;
+    }
+  }
+  .menu-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    border: 1px solid #04b4db;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+  //菜单控制按钮
+  #menu-checkbox{display: none}
+  #menu-checkbox:checked + .nav{
+    display: block;
+  }
+}
+#wlittleyang-banner-fade{
+  .container{
+    height: 200px;
+  }
+}
+.hot{
+  .hot-content{
+    header,p{
+      width: 100%;
+    }
+  }
+}
+#wlittleyang-banner-five{
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  .action{display: none}
+}
+.traffic{
+  .moreLink{
+    display: none;
+  }
+}
+.news{
+  .news-item{
+    width: 98%;
+    flex-direction: column;
+    .news-con-title{
+      top: 25px;
+    }
+    .item-left{
+      box-shadow: 0 0 5px #cccccc;
+      padding: 20px 15px 20px 15px;
+    }
+    .item-right{
+      display: flex;
+      height: 20px;
+      line-height: 20px;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
+      >div{
+        padding: 0 15px;
+      }
+      .moreLink{
+        display: none;
+      }
+    }
+  }
+
+}
+body>footer{
+  .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .contact-msg{
+      .contact-item{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .contact-msg-img{
+          margin: 15px auto;
+        }
+      }
+    }
+    .contact-kinds{
+      .ewm{
+        div{
+          margin: 0 5px;
+        }
+      }
+      .phone-number{
+        justify-content: space-between;
+      }
+    }
+  }
+}

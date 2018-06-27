@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS选择自身伪元素</title>
+    <style type="text/css">
+        #box{
+            box-shadow: 0 0 5px #cccccc;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 0 auto;
+        }
+        #box::before{
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 50px;
+            background: seagreen;
+        }
+
+        /*Q:我要怎么选择自身的伪元素？(下面不正确)*/
+        /*#box:hover ::before{*/
+            /*background: red;*/
+            /*cursor: pointer;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="box">
+    123
+</div>
+</body>
+</html>

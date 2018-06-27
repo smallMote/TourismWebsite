@@ -1,0 +1,112 @@
+
+//默认边框，方便查看
+.defaultBorder{
+  border: 1px solid seagreen;
+}
+.main-nav{
+  margin-bottom: 15px;
+  display: flex;
+  .liner{
+    background-color: #04b4db;
+    width: 25%;
+    height: 4px;
+    margin-top: 21px;
+    border: none;
+  }
+  .header-right{
+    //.defaultBorder;
+    .nav-container{
+      display: flex;
+      .logo{
+        display: flex;
+        img{
+          height: 50px;
+        }
+        span{
+          line-height: 50px;
+          white-space: nowrap;
+        }
+      }
+      .nav{
+        display: flex;
+        li{
+          width: 14px * 4;
+          line-height: 50px;
+          list-style-type: none;
+          text-align: center;
+          margin: 0 15px;
+          position: relative;
+        }
+        li::before{
+          position: absolute;
+          content: "";
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: rgb(4,180,220);
+          left: -10px;
+          bottom: -4px;
+          display: none;
+        }
+        li:first-child::before{display: block;}
+        li:first-child{
+          color: rgb(4,180,220);
+          box-shadow: 0 3px 0 #04b4db;
+        }
+        li:hover{
+          color: rgb(4,180,220);
+          box-shadow: 0 3px 0 #04b4db;
+        }
+        li:hover:before{
+          display: block;
+        }
+      }
+      #menu-checkbox,
+      .menu-btn{
+        display: none;
+      }
+    }
+  }
+}
+.team{
+  //第三个轮播，团队介绍
+  #wlittleyang-banner-five{
+    width: 540px;
+    height: 300px;
+    margin: 10px auto;
+    /*控制器*/
+    .action{
+      width: 600px;
+    }
+  }
+}
+.traffic{
+}
+.news{
+  .news-item{
+    width: 75%;
+    box-shadow: 0 0 5px #cccccc;
+    padding: 20px 15px 20px 15px;
+    .news-con-title{
+      top: 5px;
+    }
+    .item-left,.item-right{
+      height: 100px;
+    }
+  }
+}
+body>footer{
+  .contact{
+    .contact-msg-img{
+      flex-direction: column;
+    }
+    .ewm{
+      margin: 0 50px;
+    }
+    .phone-number{
+      justify-content: space-around;
+    }
+  }
+}
+
+

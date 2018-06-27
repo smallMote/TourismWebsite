@@ -1,0 +1,537 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/**
+字体说明
+苹果公司出品的字体，该字体分为Text版本和Display版本，
+Text版本用于小字号（20pt以下）的显示，而Display版本
+则用于较大的字号。
+ */
+@font-face {
+  font-family: SanFranciscoMax;
+  src: url("../font/SanFranciscoDisplay-Black-3.otf");
+}
+@font-face {
+  font-family: SanFranciscoMin;
+  src: url("../font/SanFranciscoText-Bold-11.otf");
+}
+/**测试字体**/
+@font-face {
+  font-family: artfont;
+  src: url("../font/ZhongQiYuHaoJianXingYiTi-2.ttf");
+}
+html{
+  font-size: 14px;
+  font-family: "SanFranciscoMin", "微软雅黑";
+}
+li{
+  list-style-type: none;
+  cursor: pointer;
+}
+//更多链接按钮
+.moreLink{
+  display: inline-block;
+  padding: 2px 8px 4px 8px;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background: #04b4db;
+  line-height: 14px;
+}
+//第一个轮播
+#wlittleyang-banner-fade{
+  position: relative;
+
+  .container{
+    //height: 30%;//脚本控制
+    overflow: hidden;
+    transition:  all 1s;
+  }
+  .item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 50px;
+    line-height: 300px;
+    transition: all 2s;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .item:first-child{
+    opacity: 1;
+  }
+  .item img{
+    width: 100%;
+  }
+  .action-btn{
+    display: none;
+  }
+  .action-btn span{
+    display: inline-block;
+    padding: 5px;
+    margin: 15px;
+    background: seagreen;
+    border-radius: 4px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .action-hover{
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 5%;
+    //left: 48%;
+  }
+  .action-hover-item{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: block;
+    transition: 1s all  ;
+  }
+  .action-hover-item:hover{
+    cursor: pointer;
+    background: white;
+  }
+}
+//每个模块的标题
+.module-title{
+  position: relative;
+  width: 378px;
+  margin: 15px auto;
+  .img-title::before{
+    content: "P O P U L A R";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 8px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 999;
+  }
+}
+.module-title::before{
+  content: "热/门/景/点";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: -20px;
+  line-height: 30px;
+  text-align: center;
+  font-size: large;
+  z-index: 999;
+}
+.hot{
+  .hot-content{
+    text-align: center;
+    header{
+      display: flex;
+      width: 250px;
+      color: #04b4db;
+      font-size: 24px;
+      margin: 15px auto;
+      justify-content: center;
+      hr{
+        height: 4px;
+        width: 50px;
+        background: #04b4db;
+        margin: auto 15px;
+      }
+    }
+    p{
+      display: block;
+      width: 500px;
+      margin: 0 auto;
+      word-wrap: unset;
+    }
+  }
+  .hot-img-end{
+    width: 100%;
+    overflow: hidden;
+    transition: all 1s;
+    img{
+      width: 100%;
+    }
+  }
+  //第二个轮播，热门景点
+  #wlittleyang-banner-hot{
+    width: 360px;
+    height: 345px;
+    margin: 30px auto;
+    position: relative;
+    .container{
+      /*width: 75%;*/
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    /*图片*/
+    .item{
+      background: #eeeeee;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      text-align: center;
+      line-height: 200px;
+      font-size: 50px;
+      box-shadow: 0 0 5px #cccccc;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+    /*控制器*/
+    .action:hover{
+      opacity: .5;
+    }
+    .action{
+      width: 180px * 2 + 50px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -25px;
+      z-index: 10;
+      display: flex;
+      padding: 0;
+      opacity: 0;
+      transition: opacity 1s;
+      .action-left,
+      .action-right{
+        margin: 15px;
+        display: inline-block;
+        padding: 5px;
+        font-size: 45px;
+        cursor: pointer;
+        width: 50%;
+        text-align: right;
+        line-height: 304px;
+      }
+      .action-left{
+        text-align: left;
+
+      }
+    }
+
+  }
+}
+
+//团队介绍
+.team{
+  .module-title .img-title::before{
+    content: "T E A M";
+  }
+  .module-title::before{
+    content: "团/队/介/绍";
+  }
+  .team-content{
+    header span,p{
+      display: block;
+      text-align: center;
+    }
+    header span{
+      font-family: "artfont";
+      font-size: 36px;
+    }
+    .en-position-name{
+      color: #cccccc;
+    }
+  }
+  #wlittleyang-banner-five{
+    position: relative;
+    .container{
+      /*width: 75%;*/
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    /*图片*/
+    .item{
+      background: #eeeeee;
+      border:5px solid white;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      text-align: center;
+      line-height: 200px;
+      font-size: 50px;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+
+    /*控制器*/
+    .action{
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      display: flex;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .action:hover{
+      opacity: .3;
+    }
+    .action-left,.action-right{
+      height: 300px;
+      width: 50%;
+      margin: 15px;
+      line-height: 300px;
+      display: inline-block;
+      padding: 5px;
+      font-size: 45px;
+      cursor: pointer;
+    }
+    .action-right{
+      text-align: right;
+    }
+
+  }
+}
+//交通租赁
+.traffic{
+  margin: 30px auto;
+  .module-title .img-title::before{
+    content: "T R A F F I C";
+  }
+  .module-title::before{
+    content: "交/通/租/赁";
+  }
+  .traffic-content{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+    margin: 50px auto;
+    background: url("../images/traffic/car.jpg") no-repeat bottom;
+    .en-msg{
+      color: rgba(0,0,0,.5);
+      font-weight: lighter;
+    }
+    .con-imp{
+      font-weight: bolder;
+      color: rgba(0,0,0,.7);
+    }
+  }
+  .con-left,.con-right{
+    margin-left: 90px;
+  }
+}
+//新闻中心
+.news{
+  .module-title .img-title::before{
+    content: "N E W S";
+  }
+  .module-title::before{
+    content: "新/闻/中/心";
+  }
+  .news-item:first-child{
+    margin-top: 50px;
+  }
+  .news-content-more{
+    margin: 0 auto;
+    display: block;
+    width: 60px;
+  }
+  .news-item{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    margin: 15px auto;
+    transition: 1s all;
+    //悬浮标题
+    .news-con-title{
+      position: absolute;
+      width: 270px;
+      height: 24px;
+      border-radius: 4px;
+      box-shadow: 2px 2px 2px #cccccc;
+      text-align: center;
+      display: flex;
+      overflow: hidden;
+      left: 15%;
+      span{
+        display: inline-block;
+        line-height: 24px;
+      }
+      span:first-child{
+        flex-grow: 1;
+        background: rgba(4,180,220,.5);
+      }
+      span:last-child{
+        flex-grow: 4;
+        background: #04b4db;
+        color: white;
+      }
+    }
+    .item-left{
+      flex-grow: 5;
+      display: flex;
+      position: relative;
+      img{
+        width: 150px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      p{
+        flex-grow: 1;
+        height: 100px;
+        width: 300px;
+        margin: 0 15px;
+        padding-top: 40px;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        color: rgba(0,0,0,.8);
+      }
+      p::after{
+        content: "...";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: white;
+        //display: none;
+        width: 20px;
+        height: 24px;
+        line-height: 30px;
+        color: rgba(0,0,0,.6);
+      }
+    }
+    .item-right{
+      flex-grow: 1;
+      >div{
+        margin: 5px 0;
+        .zan-msg,.date-msg{
+          color: rgba(0,0,0,.6);
+        }
+        .zan-msg{
+          position: relative;
+        }
+        .zan-msg::after{
+          content: "+";
+          position: absolute;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+//返回顶部
+.backTop{
+  margin: 50px 0;
+  width: 100%;
+  height: 10px;
+  border-bottom: 2px solid #04b4db;
+  position: relative;
+  .moreLink{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+  }
+}
+body>footer{
+  margin-top: 50px;
+  .contact{
+    display: flex;
+    justify-content: center;
+    .contact-msg{
+      .contact-item{
+        display: flex;
+        color: rgba(0,0,0,.7);
+        margin: 15px 0;
+        .contact-msg-img{
+          width: 20px;
+          display: flex;
+          justify-content: center;
+          margin: 0 15px;
+          img{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #04b4db;
+          }
+        }
+        .contact-msg-con{
+          .title{
+            font-weight: bold;
+          }
+        }
+      }
+
+    }
+    .contact-kinds{
+      display: flex;
+      .ewm{
+        display: flex;
+        div{
+          background: #04b4db;
+          width: 150px;
+          height: 150px;
+          margin: 15px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .phone-number{
+        display: flex;
+        flex-direction: column;
+
+        fieldset{
+          text-align: center;
+          padding: 5px;
+          border-radius: 4px;
+          color: rgba(0,0,0,.7);
+        }
+        fieldset:first-child{
+          div{
+            display: flex;
+            justify-content: space-around;
+          }
+          span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(0,0,0,.7);
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    margin-top: 20px;
+    line-height: 30px;
+    font-size: 12px;
+    color: white;
+    background: black;
+    font-weight: lighter;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 378px){
+  .module-title{
+    width: 100%;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+

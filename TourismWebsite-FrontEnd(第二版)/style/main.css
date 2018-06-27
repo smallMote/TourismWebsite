@@ -1,0 +1,505 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/**
+字体说明
+苹果公司出品的字体，该字体分为Text版本和Display版本，
+Text版本用于小字号（20pt以下）的显示，而Display版本
+则用于较大的字号。
+ */
+@font-face {
+  font-family: SanFranciscoMax;
+  src: url("../font/SanFranciscoDisplay-Black-3.otf");
+}
+@font-face {
+  font-family: SanFranciscoMin;
+  src: url("../font/SanFranciscoText-Bold-11.otf");
+}
+/**测试字体**/
+@font-face {
+  font-family: artfont;
+  src: url("../font/ZhongQiYuHaoJianXingYiTi-2.ttf");
+}
+html {
+  font-size: 14px;
+  font-family: "SanFranciscoMin", "微软雅黑";
+}
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+.moreLink {
+  display: inline-block;
+  padding: 2px 8px 4px 8px;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background: #04b4db;
+  line-height: 14px;
+}
+#wlittleyang-banner-fade {
+  position: relative;
+}
+#wlittleyang-banner-fade .container {
+  overflow: hidden;
+  transition: all 1s;
+}
+#wlittleyang-banner-fade .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 50px;
+  line-height: 300px;
+  transition: all 2s;
+  opacity: 0;
+  cursor: pointer;
+}
+#wlittleyang-banner-fade .item:first-child {
+  opacity: 1;
+}
+#wlittleyang-banner-fade .item img {
+  width: 100%;
+}
+#wlittleyang-banner-fade .action-btn {
+  display: none;
+}
+#wlittleyang-banner-fade .action-btn span {
+  display: inline-block;
+  padding: 5px;
+  margin: 15px;
+  background: seagreen;
+  border-radius: 4px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+#wlittleyang-banner-fade .action-hover {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5%;
+}
+#wlittleyang-banner-fade .action-hover-item {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: block;
+  transition: 1s all  ;
+}
+#wlittleyang-banner-fade .action-hover-item:hover {
+  cursor: pointer;
+  background: white;
+}
+.module-title {
+  position: relative;
+  width: 378px;
+  margin: 15px auto;
+}
+.module-title .img-title::before {
+  content: "P O P U L A R";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 8px;
+  line-height: 30px;
+  text-align: center;
+  z-index: 999;
+}
+.module-title::before {
+  content: "热/门/景/点";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: -20px;
+  line-height: 30px;
+  text-align: center;
+  font-size: large;
+  z-index: 999;
+}
+.hot .hot-content {
+  text-align: center;
+}
+.hot .hot-content header {
+  display: flex;
+  width: 250px;
+  color: #04b4db;
+  font-size: 24px;
+  margin: 15px auto;
+  justify-content: center;
+}
+.hot .hot-content header hr {
+  height: 4px;
+  width: 50px;
+  background: #04b4db;
+  margin: auto 15px;
+}
+.hot .hot-content p {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  word-wrap: unset;
+}
+.hot .hot-img-end {
+  width: 100%;
+  overflow: hidden;
+  transition: all 1s;
+}
+.hot .hot-img-end img {
+  width: 100%;
+}
+.hot #wlittleyang-banner-hot {
+  width: 360px;
+  height: 345px;
+  margin: 30px auto;
+  position: relative;
+  /*图片*/
+  /*控制器*/
+}
+.hot #wlittleyang-banner-hot .container {
+  /*width: 75%;*/
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.hot #wlittleyang-banner-hot .item {
+  background: #eeeeee;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  text-align: center;
+  line-height: 200px;
+  font-size: 50px;
+  box-shadow: 0 0 5px #cccccc;
+  overflow: hidden;
+}
+.hot #wlittleyang-banner-hot .item img {
+  width: 100%;
+}
+.hot #wlittleyang-banner-hot .action:hover {
+  opacity: .5;
+}
+.hot #wlittleyang-banner-hot .action {
+  width: 410px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -25px;
+  z-index: 10;
+  display: flex;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.hot #wlittleyang-banner-hot .action .action-left,
+.hot #wlittleyang-banner-hot .action .action-right {
+  margin: 15px;
+  display: inline-block;
+  padding: 5px;
+  font-size: 45px;
+  cursor: pointer;
+  width: 50%;
+  text-align: right;
+  line-height: 304px;
+}
+.hot #wlittleyang-banner-hot .action .action-left {
+  text-align: left;
+}
+.team .module-title .img-title::before {
+  content: "T E A M";
+}
+.team .module-title::before {
+  content: "团/队/介/绍";
+}
+.team .team-content header span,
+.team .team-content p {
+  display: block;
+  text-align: center;
+}
+.team .team-content header span {
+  font-family: "artfont";
+  font-size: 36px;
+}
+.team .team-content .en-position-name {
+  color: #cccccc;
+}
+.team #wlittleyang-banner-five {
+  position: relative;
+  /*图片*/
+  /*控制器*/
+}
+.team #wlittleyang-banner-five .container {
+  /*width: 75%;*/
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.team #wlittleyang-banner-five .item {
+  background: #eeeeee;
+  border: 5px solid white;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  text-align: center;
+  line-height: 200px;
+  font-size: 50px;
+  overflow: hidden;
+}
+.team #wlittleyang-banner-five .item img {
+  width: 100%;
+}
+.team #wlittleyang-banner-five .action {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.team #wlittleyang-banner-five .action:hover {
+  opacity: .3;
+}
+.team #wlittleyang-banner-five .action-left,
+.team #wlittleyang-banner-five .action-right {
+  height: 300px;
+  width: 50%;
+  margin: 15px;
+  line-height: 300px;
+  display: inline-block;
+  padding: 5px;
+  font-size: 45px;
+  cursor: pointer;
+}
+.team #wlittleyang-banner-five .action-right {
+  text-align: right;
+}
+.traffic {
+  margin: 30px auto;
+}
+.traffic .module-title .img-title::before {
+  content: "T R A F F I C";
+}
+.traffic .module-title::before {
+  content: "交/通/租/赁";
+}
+.traffic .traffic-content {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  margin: 50px auto;
+  background: url("../images/traffic/car.jpg") no-repeat bottom;
+}
+.traffic .traffic-content .en-msg {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: lighter;
+}
+.traffic .traffic-content .con-imp {
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.7);
+}
+.traffic .con-left,
+.traffic .con-right {
+  margin-left: 90px;
+}
+.news .module-title .img-title::before {
+  content: "N E W S";
+}
+.news .module-title::before {
+  content: "新/闻/中/心";
+}
+.news .news-item:first-child {
+  margin-top: 50px;
+}
+.news .news-content-more {
+  margin: 0 auto;
+  display: block;
+  width: 60px;
+}
+.news .news-item {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  margin: 15px auto;
+  transition: 1s all;
+}
+.news .news-item .news-con-title {
+  position: absolute;
+  width: 270px;
+  height: 24px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #cccccc;
+  text-align: center;
+  display: flex;
+  overflow: hidden;
+  left: 15%;
+}
+.news .news-item .news-con-title span {
+  display: inline-block;
+  line-height: 24px;
+}
+.news .news-item .news-con-title span:first-child {
+  flex-grow: 1;
+  background: rgba(4, 180, 220, 0.5);
+}
+.news .news-item .news-con-title span:last-child {
+  flex-grow: 4;
+  background: #04b4db;
+  color: white;
+}
+.news .news-item .item-left {
+  flex-grow: 5;
+  display: flex;
+  position: relative;
+}
+.news .news-item .item-left img {
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.news .news-item .item-left p {
+  flex-grow: 1;
+  height: 100px;
+  width: 300px;
+  margin: 0 15px;
+  padding-top: 40px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  color: rgba(0, 0, 0, 0.8);
+}
+.news .news-item .item-left p::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+  width: 20px;
+  height: 24px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.news .news-item .item-right {
+  flex-grow: 1;
+}
+.news .news-item .item-right > div {
+  margin: 5px 0;
+}
+.news .news-item .item-right > div .zan-msg,
+.news .news-item .item-right > div .date-msg {
+  color: rgba(0, 0, 0, 0.6);
+}
+.news .news-item .item-right > div .zan-msg {
+  position: relative;
+}
+.news .news-item .item-right > div .zan-msg::after {
+  content: "+";
+  position: absolute;
+  font-size: 10px;
+}
+.backTop {
+  margin: 50px 0;
+  width: 100%;
+  height: 10px;
+  border-bottom: 2px solid #04b4db;
+  position: relative;
+}
+.backTop .moreLink {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+}
+body > footer {
+  margin-top: 50px;
+}
+body > footer .contact {
+  display: flex;
+  justify-content: center;
+}
+body > footer .contact .contact-msg .contact-item {
+  display: flex;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 15px 0;
+}
+body > footer .contact .contact-msg .contact-item .contact-msg-img {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 0 15px;
+}
+body > footer .contact .contact-msg .contact-item .contact-msg-img img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #04b4db;
+}
+body > footer .contact .contact-msg .contact-item .contact-msg-con .title {
+  font-weight: bold;
+}
+body > footer .contact .contact-kinds {
+  display: flex;
+}
+body > footer .contact .contact-kinds .ewm {
+  display: flex;
+}
+body > footer .contact .contact-kinds .ewm div {
+  background: #04b4db;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+}
+body > footer .contact .contact-kinds .ewm div img {
+  width: 100%;
+}
+body > footer .contact .contact-kinds .phone-number {
+  display: flex;
+  flex-direction: column;
+}
+body > footer .contact .contact-kinds .phone-number fieldset {
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.7);
+}
+body > footer .contact .contact-kinds .phone-number fieldset:first-child div {
+  display: flex;
+  justify-content: space-around;
+}
+body > footer .contact .contact-kinds .phone-number fieldset:first-child span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+}
+body > footer .copyright {
+  margin-top: 20px;
+  line-height: 30px;
+  font-size: 12px;
+  color: white;
+  background: black;
+  font-weight: lighter;
+  text-align: center;
+}
+@media screen and (max-width: 378px) {
+  .module-title {
+    width: 100%;
+    overflow: hidden;
+  }
+  .module-title img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
